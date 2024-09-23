@@ -1,2 +1,2 @@
 # LD_Console-Block-App
-A simple App to Block the Ld_Console
+Just a simple App to Block the Ld_Console that is used in many schools ;)
