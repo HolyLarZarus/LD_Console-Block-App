@@ -66,25 +66,25 @@ bold_font = customtkinter.CTkFont(family='Roboto', size=20, weight='bold')
 def update_button():
     if is_running('java.exe') or is_running('javaw.exe'):
         
-        button.configure(text="Stoppe LD Console", command=lambda: threading.Thread(target=main).start())
+        button.configure(text="Stopp LD_Console", command=lambda: threading.Thread(target=main).start())
         button.pack(pady=20)
-        status_label.configure(text="❌LD Konsole ist aktiv!❌", fg_color="red")
+        status_label.configure(text="❌LD_Console is aktive!❌", fg_color="red")
     else:
         
-        button.configure(text="Starte die LD Console wieder", command=lambda: threading.Thread(target=start_Ld_process).start())
-        status_label.configure(text="✅LD Konsole ist blockiert!✅", fg_color="green")
+        button.configure(text="Start the LD_Console", command=lambda: threading.Thread(target=start_Ld_process).start())
+        status_label.configure(text="✅LD_Console is blocked!✅", fg_color="green")
 
     root.after(1000, update_button)
 
 root.after(100, update_button)
 
-label1 = customtkinter.CTkLabel(master=frame, text="Du kannst das Fenster jetzt schließen und später einfach wieder öffnen!", font=bold_font, wraplength=500)
+label1 = customtkinter.CTkLabel(master=frame, text="You can close the window now and easily reopen it later!", font=bold_font, wraplength=500)
 label1.pack(pady=20, padx=10)
 
-label4 = customtkinter.CTkLabel(master=frame, text="ACHTUNG:", fg_color="red", font=bold_font)
+label4 = customtkinter.CTkLabel(master=frame, text="ATTENTION:", fg_color="red", font=bold_font)
 label4.pack(pady=12, padx=10)
 
-label2 = customtkinter.CTkLabel(master=frame, text="Dieses Programm kann die LD_Console stoppen! Es handelt sich um ein Projekt, das ausschließlich zu Übungszwecken im Umgang mit Python entwickelt wurde (Code in README.txt). Eine Nutzung für andere Zwecke, insbesondere solche, die gegen Schulregeln verstoßen könnten, ist untersagt. Die Verwendung erfolgt auf eigenes Risiko. Ich übernehme keine Haftung für mögliche Folgen. Ausschließlich für Bildungszwecke!", wraplength=500)
+label2 = customtkinter.CTkLabel(master=frame, text="This program can stop the LD_Console! It's a project created solely for practicing Python programming (code in README.txt). Using it for any other purpose, especially those that might break school rules, is strictly prohibited. Use at your own risk. I am not responsible for any consequences. For educational purposes only!", wraplength=500)
 label2.pack(pady=20, padx=10)
 
 labe3 = customtkinter.CTkLabel(master=frame, text="Made By LarZarus")
